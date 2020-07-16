@@ -4,4 +4,6 @@
     Route::post("/insert", "HomeController@insert");
     Route::get("/delete/{id}", "HomeController@Delete");
     Route::get("/mail", "HomeController@Mail");
+
+    Route::get("/test", "HomeController@TestFunction");
 ?>
