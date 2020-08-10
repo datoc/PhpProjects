@@ -1,0 +1,333 @@
+$btncolor: #B1986F;
+$darkcolor: #202020;
+$light: #ffffff;
+$transparent: rgba(0, 0, 0, 0.7);
+$width: 100%;
+
+@font-face {
+    font-family: "comforta";
+    src: url("../fonts/comforta.ttf");
+}
+
+* {
+    font-family: "comforta";
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+@mixin layer($pos: absolute, $t: 0, $l: 0) {
+    background-color: $transparent;
+    width: $width;
+    height: 100%;
+    position: $pos;
+    top: $t;
+    left: $l;
+}
+
+@mixin layer1($pos: absolute, $t: 0, $l: 0) {
+    background-color: $transparent;
+    width: $width;
+    height: 70vh;
+    position: $pos;
+    top: $t;
+    left: $l;
+}
+
+@mixin circle($bg: $btncolor, $fg: $light, $radius: 50px) {
+    background-color: $bg;
+    color: $fg;
+    border-radius: $radius;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+header {
+    overflow: hidden;
+    width: $width;
+    height: 100vh;
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .headerlayer {
+        @include layer();
+
+        .container {
+            .info {
+                overflow: hidden;
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                width: 240px;
+
+                span {
+                    color: $light;
+                    height: 10px;
+                    padding: 4px;
+                    position: inherit;
+                    bottom: 12px;
+                }
+            }
+            .lang {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                bottom: 12px;
+                left: 600px;
+                z-index: 2;
+
+                .dropdown {
+                    span {
+                        color: $light;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .header-btn {
+            padding: 20px 24px;
+            background-color: $btncolor;
+            color: $light;
+            text-decoration: none;
+            -webkit-transition-duration: 0.5s;
+            -ms-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+
+            &:hover {
+                background-color: $darkcolor;
+                transition-duration: 0.5s;
+            }
+        }
+    }
+}
+
+.iconclass {
+    padding-top: 10px;
+    font-size: 17px;
+    position: relative;
+}
+
+.circle {
+    @include circle();
+
+    .fa-phone {
+        @extend .iconclass
+    }
+
+    .fa-map-marker {
+        @extend .iconclass
+    }
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+}
+
+.form-group {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+
+    label {
+        font-weight: lighter;
+    }
+
+    input {
+        color: $darkcolor;
+        padding: 12px 14px;
+        outline: none;
+        border-radius: 0;
+        border: none;
+        width: 260px;
+    }
+}
+
+.bg-dark {
+    background-color: $darkcolor;
+    color: $light;
+}
+
+.bt {
+    padding: 12px 14px;
+    outline: none;
+    background-color: $btncolor;
+    color: $light;
+    border: none;
+    border-radius: 0;
+    width: 240px;
+}
+
+@media screen and (max-width: 768px) {
+    #top {
+        display: none;
+    }
+}
+
+@mixin line {
+    width: 120px;
+    background-color: $btncolor;
+    height: 4px;
+}
+
+.line {
+    @include line;
+}
+
+.hotels {
+    background-color: $darkcolor;
+    color: $light;
+    margin: 25px;
+    overflow: hidden;
+    display: inline-block;
+    width: 330px;
+
+    .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        background-color: $btncolor;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hotels {
+        width: $width;
+        margin: 2px;
+    }
+}
+
+.b {background-color: $darkcolor;color: $light;height: 80vh;overflow: hidden;}
+.d {background-image: url("../img/pr.jpg");background-size: cover;height: 80vh;overflow: hidden;}
+
+.con {
+    overflow: hidden;
+    display: inline-flex;
+
+    .square {
+        width: 70px;
+        height: 70px;
+        background-color: $light;
+        border: 3px solid $btncolor;
+        overflow: hidden;
+        position: relative;
+        margin: 20px;
+
+        .fa-wifi {
+            padding-top: 20px;
+            font-size: 25px;
+            color: $btncolor;
+        }
+    }
+
+    h4 {
+        strong {
+            position: relative;
+            left: 10px;
+        }
+    }
+    p {
+        position: relative;
+        top: 50px;
+    }
+}
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $darkcolor;
+
+    .infos {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 80px;
+
+        .fa-twitter, .fa-youtube, .fa-instagram, .fa-facebook {
+            @extend .iconclass;
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        background-color: $btncolor;
+        margin: 0;
+        padding: 0;
+        color: $light;
+    }
+}
+
+.blocks {
+    overflow: hidden;
+    margin: 25px 0;
+    width: 390px;
+    height: 460px;
+
+    img {
+        height: 240px;
+        width: 100%;
+    }
+}
+
+.news {
+    overflow: hidden;
+    width: $width;
+    height: 70vh;
+    background-image: url("../img/reisetopia-aI6Su7Mu9Ro-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .headerlayer {
+        @include layer1();
+    }
+}
+
+form[action="send"] {
+    input {
+        background-color: lightgray;
+        width: 350px;
+        position: relative;
+    }
+
+    textarea {
+        resize: none;
+        background-color: lightgray;
+        width: 350px;
+        height: 260px;
+        border: none;
+    }
+}
+
+.infos {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+
+    .fa-twitter, .fa-youtube, .fa-instagram, .fa-facebook {
+        @extend .iconclass;
+    }
+}

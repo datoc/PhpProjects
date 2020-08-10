@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "comforta";
+  src: url("../fonts/comforta.ttf");
+}
+* {
+  font-family: "comforta";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+header {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .headerlayer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .headerlayer .container .info {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 240px;
+}
+header .headerlayer .container .info span {
+  color: #ffffff;
+  height: 10px;
+  padding: 4px;
+  position: inherit;
+  bottom: 12px;
+}
+header .headerlayer .container .lang {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  bottom: 12px;
+  left: 600px;
+  z-index: 2;
+}
+header .headerlayer .container .lang .dropdown span {
+  color: #ffffff;
+  cursor: pointer;
+}
+header .headerlayer .header-btn {
+  padding: 20px 24px;
+  background-color: #B1986F;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+header .headerlayer .header-btn:hover {
+  background-color: #202020;
+  transition-duration: 0.5s;
+}
+
+.iconclass, .infos .fa-twitter, .infos .fa-youtube, .infos .fa-instagram, .infos .fa-facebook, footer .infos .fa-twitter, footer .infos .fa-youtube, footer .infos .fa-instagram, footer .infos .fa-facebook, .circle .fa-map-marker, .circle .fa-phone {
+  padding-top: 10px;
+  font-size: 17px;
+  position: relative;
+}
+
+.circle {
+  background-color: #B1986F;
+  color: #ffffff;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.form-group {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+.form-group label {
+  font-weight: lighter;
+}
+.form-group input {
+  color: #202020;
+  padding: 12px 14px;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  width: 260px;
+}
+
+.bg-dark {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+.bt {
+  padding: 12px 14px;
+  outline: none;
+  background-color: #B1986F;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  width: 240px;
+}
+
+@media screen and (max-width: 768px) {
+  #top {
+    display: none;
+  }
+}
+.line {
+  width: 120px;
+  background-color: #B1986F;
+  height: 4px;
+}
+
+.hotels {
+  background-color: #202020;
+  color: #ffffff;
+  margin: 25px;
+  overflow: hidden;
+  display: inline-block;
+  width: 330px;
+}
+.hotels .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #B1986F;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .hotels {
+    width: 100%;
+    margin: 2px;
+  }
+}
+.b {
+  background-color: #202020;
+  color: #ffffff;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.d {
+  background-image: url("../img/pr.jpg");
+  background-size: cover;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.con {
+  overflow: hidden;
+  display: inline-flex;
+}
+.con .square {
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border: 3px solid #B1986F;
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+}
+.con .square .fa-wifi {
+  padding-top: 20px;
+  font-size: 25px;
+  color: #B1986F;
+}
+.con h4 strong {
+  position: relative;
+  left: 10px;
+}
+.con p {
+  position: relative;
+  top: 50px;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+}
+footer .infos {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+}
+footer .bottom {
+  width: 100%;
+  background-color: #B1986F;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.blocks {
+  overflow: hidden;
+  margin: 25px 0;
+  width: 390px;
+  height: 460px;
+}
+.blocks img {
+  height: 240px;
+  width: 100%;
+}
+
+.news {
+  overflow: hidden;
+  width: 100%;
+  height: 70vh;
+  background-image: url("../img/reisetopia-aI6Su7Mu9Ro-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.news .headerlayer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+form[action=send] input {
+  background-color: lightgray;
+  width: 350px;
+  position: relative;
+}
+form[action=send] textarea {
+  resize: none;
+  background-color: lightgray;
+  width: 350px;
+  height: 260px;
+  border: none;
+}
+
+.infos {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+}
+
+/*# sourceMappingURL=style.css.map */
